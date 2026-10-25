@@ -76,10 +76,35 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <span>© Sri Viswa School E-Connect</span>
-    <span>Privacy-first design · Prototype</span>
-  </footer>
+<footer class="footer">
+  <span>© Sri Viswa School E-Connect</span>
+  <span class="footer-credit">
+    An initiative of
+    <button id="valiassLink" class="valiass-link" type="button">@valiass</button>
+    team
+  </span>
+</footer>
+
+<div id="valiassPopup" class="valiass-popup" hidden>
+  <div class="valiass-popup-content" role="dialog" aria-modal="true" aria-labelledby="valiassPopupTitle">
+    <button id="closeValiassPopup" class="valiass-close" type="button" aria-label="Close">×</button>
+
+    <h2 id="valiassPopupTitle">Digital &amp; Web Solutions</h2>
+    <p>Need a website or digital solution for your business?</p>
+    <p>We create digital experiences tailored to your requirements.</p>
+
+    <a href="tel:+918985361991" class="valiass-contact">
+      Call Us
+      <small>Talk to our team directly</small>
+    </a>
+
+    <a href="https://wa.me/918985361991" class="valiass-contact" target="_blank" rel="noopener noreferrer">
+      WhatsApp Us
+      <small>Message us about your requirements</small>
+    </a>
+  </div>
+</div>
+
   <script src="app.js"></script>
 </body>
 </html>
