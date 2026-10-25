@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12365b">
+  <title>Sri Viswa School E-Connect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">SV</div>
+    <div class="brand-copy">
+      <strong>Sri Viswa School</strong>
+      <span>E-Connect</span>
+    </div>
+    <button id="homeButton" class="text-button" type="button" hidden>Home</button>
+  </header>
+
+  <main id="app" class="app-shell">
+    <section id="welcomeView" class="welcome-view">
+      <div class="welcome-copy">
+        <p class="eyebrow">SCHOOL COMMUNICATION PORTAL</p>
+        <h1>Connected learning.<br><span>Clear communication.</span></h1>
+        <p class="intro">A simple place for school updates, homework, attendance and family communication.</p>
+      </div>
+
+      <div class="entry-grid">
+        <button class="entry-card" type="button" data-entry="school">
+          <span class="entry-icon" aria-hidden="true">🏫</span>
+          <span class="entry-title">School</span>
+          <span class="entry-description">Staff and school administration</span>
+          <span class="entry-action">Continue <span aria-hidden="true">→</span></span>
+        </button>
+        <button class="entry-card" type="button" data-entry="parent">
+          <span class="entry-icon" aria-hidden="true">👨‍👩‍👧</span>
+          <span class="entry-title">Parent</span>
+          <span class="entry-description">Your child’s school information</span>
+          <span class="entry-action">Continue <span aria-hidden="true">→</span></span>
+        </button>
+      </div>
+
+      <button id="adminEntry" class="admin-entry" type="button">Valiass Super Admin <span aria-hidden="true">→</span></button>
+      <p class="demo-note"><span class="dot"></span> Prototype preview · Demo data only · Not connected to live student records</p>
+    </section>
+
+    <section id="loginView" class="panel-view" hidden>
+      <button class="back-button" type="button" data-back>← Back</button>
+      <p class="eyebrow" id="loginEyebrow">SECURE ACCESS</p>
+      <h1 id="loginTitle">School sign in</h1>
+      <p id="loginDescription" class="muted">Choose a demo role to preview its dashboard.</p>
+      <div id="roleOptions" class="role-list"></div>
+      <div class="demo-warning">
+        <strong>Demo mode only</strong>
+        <p>This preview does not authenticate users. Real sign-in and server-enforced permissions must be implemented before use with school data.</p>
+      </div>
+    </section>
+
+    <section id="dashboardView" class="panel-view" hidden>
+      <div class="dashboard-heading">
+        <div>
+          <p class="eyebrow">SRI VISWA SCHOOL E-CONNECT</p>
+          <h1 id="dashboardTitle">Dashboard</h1>
+          <p id="dashboardSubtitle" class="muted"></p>
+        </div>
+        <button id="signOutButton" class="outline-button" type="button">Exit demo</button>
+      </div>
+      <div id="dashboardNotice" class="demo-banner">Demo dashboard — no live student information is shown.</div>
+      <div id="dashboardCards" class="dashboard-grid"></div>
+      <section id="detailPanel" class="detail-panel" hidden>
+        <button id="closeDetail" class="back-button" type="button">← Back to dashboard</button>
+        <h2 id="detailTitle"></h2>
+        <p id="detailText" class="muted"></p>
+        <div id="detailContent"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© Sri Viswa School E-Connect</span>
+    <span>Privacy-first design · Prototype</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
