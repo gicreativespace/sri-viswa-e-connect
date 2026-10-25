@@ -233,3 +233,34 @@ document.getElementById("signOutButton").addEventListener("click", () => showVie
 document.getElementById("closeDetail").addEventListener("click", () => { detailPanel.hidden = true; });
 
 showView("welcome");
+
+/* Valiass Contact Popup */
+const valiassLink = document.getElementById("valiassLink");
+const valiassPopup = document.getElementById("valiassPopup");
+const closeValiassPopup = document.getElementById("closeValiassPopup");
+
+function openValiassPopup() {
+  valiassPopup.hidden = false;
+  closeValiassPopup.focus();
+}
+
+function closeValiassContactPopup() {
+  valiassPopup.hidden = true;
+  valiassLink.focus();
+}
+
+valiassLink.addEventListener("click", openValiassPopup);
+
+closeValiassPopup.addEventListener("click", closeValiassContactPopup);
+
+valiassPopup.addEventListener("click", (event) => {
+  if (event.target === valiassPopup) {
+    closeValiassContactPopup();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !valiassPopup.hidden) {
+    closeValiassContactPopup();
+  }
+});
