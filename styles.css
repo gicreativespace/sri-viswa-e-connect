@@ -468,3 +468,120 @@ h1 span {
     grid-template-columns: 1fr;
   }
 }
+
+/* Footer — Valiass Contact Popup */
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.valiass-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.valiass-link:hover {
+  color: var(--navy);
+}
+
+.valiass-popup[hidden] {
+  display: none !important;
+}
+
+.valiass-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(12, 39, 67, 0.58);
+}
+
+.valiass-popup-content {
+  position: relative;
+  width: min(100%, 420px);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px 24px 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 24px 70px rgba(12, 39, 67, 0.22);
+}
+
+.valiass-popup-content h2 {
+  margin: 0 30px 12px 0;
+  color: var(--navy);
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.valiass-popup-content p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.valiass-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--navy);
+  font-size: 25px;
+}
+
+.valiass-close:hover {
+  background: var(--blue-soft);
+}
+
+.valiass-contact {
+  display: block;
+  margin-top: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--primary-light);
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.valiass-contact:hover {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+}
+
+.valiass-contact small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  .valiass-popup-content {
+    padding: 28px 18px 20px;
+  }
+
+  .valiass-popup-content h2 {
+    font-size: 21px;
+  }
+}
